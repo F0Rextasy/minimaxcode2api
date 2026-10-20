@@ -1,0 +1,35 @@
+{
+  "name": "minimaxcode2api",
+  "version": "0.1.0",
+  "description": "Unofficial bridge: MiniMax Code (mcode) OAuth account -> OpenAI-compatible local API (chat completions + Anthropic passthrough).",
+  "type": "module",
+  "bin": {
+    "minimaxcode2api": "bin/minimaxcode2api.js"
+  },
+  "main": "src/server.js",
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/minimaxcode2api.js serve",
+    "login": "node bin/minimaxcode2api.js login",
+    "test": "node test/smoke.js"
+  },
+  "keywords": [
+    "minimax",
+    "mcode",
+    "openai-compatible",
+    "bridge",
+    "oauth",
+    "device-flow",
+    "9router"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}

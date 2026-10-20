@@ -1,0 +1,14 @@
+# The token store lives outside the repo (~/.minimaxcode2api/tokens.json) and
+# must stay there. These rules are the belt-and-braces for a copy that ends up
+# next to the code: never commit credentials.
+node_modules/
+tokens.json
+*.tokens.json
+.minimaxcode2api/
+*.log
+.env
+.env.*
+.DS_Store
+keys.txt
+accounts.json
+proxies.txt

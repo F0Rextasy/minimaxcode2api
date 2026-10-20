@@ -1,0 +1,6 @@
+# Normalise line endings in the repo: LF in the working tree and in commits,
+# whatever the platform that checks it out.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary
