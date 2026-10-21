@@ -99,7 +99,13 @@ export async function pollToken(device, codeVerifier) {
   if (st === "denied" || st === "access_denied") return { error: "access_denied" };
   if (st === "expired" || st === "expired_token") return { error: "expired_token" };
   if (st) return { error: `unexpected_status:${st}` };
-  if (str(body, "error")) return { error: `${str(body, "error")}${str(body, "error_description") ? `: ${str(body, "error_description")}` : ""}` };
+  // RFC 8628: pending approval comes back as HTTP 400 + error=authorization_pending
+  // (MiniMax does exactly this), not as 200 + status="pending". Both shapes must
+  // keep polling; only slow_down adjusts the interval and the rest are terminal.
+  const errCode = str(body, "error");
+  if (errCode === "authorization_pending") return { pending: "authorization_pending" };
+  if (errCode === "slow_down") return { pending: "slow_down" };
+  if (errCode) return { error: `${errCode}${str(body, "error_description") ? `: ${str(body, "error_description")}` : ""}` };
   if (!str(body, "access_token")) return { error: `no_access_token (HTTP ${status})` };
   return { tokens: body };
 }
