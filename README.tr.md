@@ -165,3 +165,7 @@ tamamlamaları (JSON + SSE) ve Anthropic passthrough, köprü üzerinden hepsi H
 ## Lisans
 
 MIT — bkz. [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Hesap riski ve riski en aza indirme

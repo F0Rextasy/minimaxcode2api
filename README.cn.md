@@ -165,3 +165,7 @@ Anthropic JSON → OpenAI 补全，以及 Anthropic SSE → OpenAI 分块流（�
 ## 许可证
 
 MIT——见 [LICENSE](LICENSE)。
+
+---
+
+## ⚠️ 账号风险与降低方法

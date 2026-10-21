@@ -166,3 +166,7 @@ Verificado contra una cuenta real de MiniMax Code: inicio de sesión mediante el
 ## Licencia
 
 MIT — ver [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Riesgo de cuenta y cómo minimizarlo

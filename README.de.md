@@ -166,3 +166,7 @@ Completions (JSON + SSE) und der Anthropic-Passthrough antworteten alle mit HTTP
 ## Lizenz
 
 MIT — siehe [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Konto-Risiko und Minimierung

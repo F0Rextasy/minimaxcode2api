@@ -166,3 +166,7 @@ Verificado contra uma conta MiniMax Code real: login através do device flow, ch
 ## Licença
 
 MIT — veja [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Risco de conta e como minimizar

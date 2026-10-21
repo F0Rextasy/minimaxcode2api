@@ -166,3 +166,7 @@ Vérifié contre un compte MiniMax Code réel : connexion via le device flow, co
 ## Licence
 
 MIT — voir [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Risque de compte et minimisation

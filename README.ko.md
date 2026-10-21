@@ -166,3 +166,7 @@ Anthropic JSON → OpenAI completion, 그리고 Anthropic SSE → OpenAI 청크 
 ## 라이선스
 
 MIT — [LICENSE](LICENSE) 참조.
+
+---
+
+## ⚠️ 계정 위험과 최소화

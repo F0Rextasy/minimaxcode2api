@@ -166,3 +166,7 @@ completion（JSON + SSE）、Anthropic パススルーはすべてブリッジ�
 ## ライセンス
 
 MIT — [LICENSE](LICENSE) を参照。
+
+---
+
+## ⚠️ アカウントリスクと最小化

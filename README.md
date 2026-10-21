@@ -166,3 +166,7 @@ completions (JSON + SSE) and the Anthropic passthrough all answered HTTP 200 thr
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Account risk & how to minimise it

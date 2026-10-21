@@ -166,3 +166,7 @@ Anthropic JSON → завершение OpenAI и Anthropic SSE → поток �
 ## Лицензия
 
 MIT — см. [LICENSE](LICENSE).
+
+---
+
+## ⚠️ Риск блокировки и как его снизить
