@@ -16,15 +16,25 @@ export function storePath() {
   return config.storePath || defaultPath;
 }
 
+// The cache is mtime-guarded: a second consumer (the daily check-in keeper)
+// rotates the token file while this process keeps running, and a stale cache
+// would make our next refresh spend a refresh token that is already gone.
 let cache = null;
+let cacheMtime = 0;
 
 export function load() {
-  if (cache) return cache;
+  const file = storePath();
+  let mtime = 0;
   try {
-    cache = JSON.parse(fs.readFileSync(storePath(), "utf8"));
+    mtime = fs.statSync(file).mtimeMs;
+  } catch {}
+  if (cache && mtime === cacheMtime) return cache;
+  try {
+    cache = JSON.parse(fs.readFileSync(file, "utf8"));
   } catch {
     cache = {};
   }
+  cacheMtime = mtime;
   return cache;
 }
 
@@ -33,6 +43,11 @@ export function save(next) {
   const file = storePath();
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(next, null, 2));
+  try {
+    cacheMtime = fs.statSync(file).mtimeMs;
+  } catch {
+    cacheMtime = 0;
+  }
   try {
     fs.chmodSync(file, 0o600);
   } catch {}
