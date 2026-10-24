@@ -17,9 +17,10 @@
     "node": ">=18"
   },
   "scripts": {
-    "start": "node bin/minimaxcode2api.js serve",
+    "start": "node src/launcher.js",
     "login": "node bin/minimaxcode2api.js login",
-    "test": "node test/smoke.js"
+    "test": "node test/smoke.js",
+    "mint": "node src/cli.js --auto"
   },
   "keywords": [
     "minimax",
